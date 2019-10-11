@@ -1,0 +1,8 @@
+<button 
+  class="btn btn-primary"
+  (click)="onToggle() "> Display details</button>
+<p *ngIf="visible"> Marry had a little lamb</p>
+<div *ngFor="let clickLog of clicksLog; index as i"
+    [ngStyle]="{backgroundColor: (i > 3 ? 'blue':'transparent')}"
+    [ngClass]="{'white-text' : i > 3}">{{clickLog.counter}}.click, timestamp = {{clickLog.time}}>
+</div>
